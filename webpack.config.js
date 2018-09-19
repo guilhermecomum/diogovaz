@@ -11,7 +11,7 @@ module.exports = {
   devtool: 'source-map',
   module: {
     noParse: /node_modules\/glitch-canvas\/dist\/glitch-canvas\.js/,
-    preLoaders: [
+    loaders: [
       {
         include: path.resolve(__dirname, 'src/js'),
         loader: 'eslint-loader',
@@ -34,6 +34,6 @@ module.exports = {
     }),
   ],
   resolve: {
-    extensions: ['', '.js'],
+    extensions: ['ts', '.js'],
   },
 };

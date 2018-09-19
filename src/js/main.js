@@ -5,7 +5,7 @@ import glitchCanvas from 'glitch-canvas';
 
 const canvas = document.createElement('canvas');
 const context = canvas.getContext('2d');
-const aspectRatio = 2000 / 820;
+const aspectRatio = 2000 / 1333;
 
 let canvasH;
 let canvasW;
@@ -14,12 +14,15 @@ let image = document.querySelector('.glitch-image');
 let currentImage = 0;
 
 const images = {
-  bagan: '#fedcc3',
-  zabriskie: '#ffffee',
-  fundy: '#efe6e9',
-  mandalay: '#e4dadb',
-  pointreyes: '#ebeaef',
-  unionsq: '#f0f0f0',
+  a: '#f0f0f0',
+  b: '#f0f0f0',
+  c: '#f0f0f0',
+  d: '#f0f0f0',
+  e: '#f0f0f0',
+  f: '#f0f0f0',
+  j: '#f0f0f0',
+  k: '#f0f0f0',
+  l: '#f0f0f0',
 };
 
 function random(floor, ceiling) {
@@ -102,8 +105,9 @@ function twatch() {
 
   const newImage = new Image();
   const newImageName = Object.keys(images)[currentImage % Object.keys(images).length];
-
+  
   newImage.src = `/assets/images/${newImageName}.jpg`;
+  console.log(newImage)
   newImage.onload = () => {
     image = newImage;
     document.body.style.backgroundColor = images[newImageName];
