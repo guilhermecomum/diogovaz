@@ -16,10 +16,10 @@
   },
   "scripts": {
     "build": "npm run build-js; npm run build-css",
-    "build-css": "node-sass --output-style compressed --source-map true --source-map-contents src/scss/main.scss --output docs/build",
+    "build-css": "node-sass --output-style compressed --source-map true --source-map-contents src/scss/main.scss --output public/build",
     "build-js": "webpack --progress --colors",
     "lint": "eslint src",
-    "watch": "webpack-dev-server --progress --colors --content-base ./docs"
+    "watch": "webpack-dev-server --progress --colors --content-base ./build"
   },
   "dependencies": {
     "glitch-canvas": "^1.0.2",
